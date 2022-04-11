@@ -1,0 +1,38 @@
+[
+    {
+      "id": "62544d9c5e36f1b23a78ee58",
+      "picture": "https://i.ibb.co/26d3L4P/ali-inay-0h9-Lsn-Y13-Hs-unsplash-1.jpg",
+      "price": 70,
+      "type": "Single"
+    },
+    {
+      "id": "62544d9c43c770ec7cbf8b4f",
+      "picture": "https://i.ibb.co/5xmj1w7/alexander-kaunas-7-ZD-JIwl410-uns-1.jpg",
+      "price": 130,
+      "type": "Double"
+    },
+    {
+      "id": "62544d9c581d7a96f2f8b306",
+      "picture": "https://i.ibb.co/6ZGjnh3/hans-isaacson-sbg3-Fu-IRQcs-unspla.jpg",
+      "price": 180,
+      "type": "Small Suite"
+    },
+    {
+      "id": "62544d9c0d619130a6f13895",
+      "picture": "https://i.ibb.co/3YDg6vr/eduardo-freire-1-UH-u-Vz-Ti-DU-unspl.jpg",
+      "price": 225,
+      "type": "Studio"
+    },
+    {
+      "id": "62544d9cd38d410b60977e4b",
+      "picture": "https://i.ibb.co/kqSSnwF/francesca-tosolini-t-Hk-JAMc-O3-QE-u.jpg",
+      "price": 275,
+      "type": "Large Suite"
+    },
+    {
+      "id": "62544d9cb9cce3e57796f471",
+      "picture": "https://i.ibb.co/6ZGjnh3/hans-isaacson-sbg3-Fu-IRQcs-unspla.jpg",
+      "price": 330,
+      "type": "Cabana"
+    }
+  ]
