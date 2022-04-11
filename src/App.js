@@ -6,6 +6,7 @@ import Review from './Pages/Cart/Review/Review';
 import LogIn from './Pages/Form/LogIn/LogIn';
 import Register from './Pages/Form/Register/Register';
 import Home from './Pages/Home/Home/Home';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
@@ -16,7 +17,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
-        <Route path='/review' element={<Review />}></Route>
+        <Route path='/review' element={
+          <RequireAuth>
+            <Review />
+          </RequireAuth>
+        }></Route>
         <Route path='/checkOut' element={<CheckOut />}></Route>
         <Route path='/about' element={<About />}></Route>
         <Route path='/login' element={<LogIn />}></Route>

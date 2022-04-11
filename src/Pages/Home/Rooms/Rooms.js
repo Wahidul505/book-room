@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import useRooms from '../../../hooks/useRooms';
 import Room from '../Room/Room';
 
 const Rooms = () => {
-    const [rooms, setRooms] = useState([]);
-    useEffect(() => {
-        fetch('rooms.json')
-            .then(res => res.json())
-            .then(data => setRooms(data));
-    }, [])
+    const rooms = useRooms();
     return (
         <div>
             <h1 className='text-3xl text-center text-gray-700 mb-4'>Book Rooms</h1>
