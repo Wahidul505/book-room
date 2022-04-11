@@ -5,9 +5,9 @@ import useFirebase from '../../../hooks/useFirebase';
 const Header = () => {
     const { user, handleLogOut} = useFirebase();
     return (
-        <header className='flex py-2 px-6 justify-between items-center text-xl mb-16'>
-            <h1 className='text-2xl'>BookRoom</h1>
-            <nav className='flex gap-6'>
+        <header className='md:flex py-2 px-6 justify-between items-center text-base md:text-xl mb-16'>
+            <h1 className='md:text-2xl'>BookRoom</h1>
+            <nav className='flex gap-3 md:gap-6 flex-col md:flex-row text-center'>
                 <Link to='/home'>Home</Link>
                 <Link to='/about'>About Us</Link>
                 {
