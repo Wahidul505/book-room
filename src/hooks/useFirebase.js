@@ -1,9 +1,10 @@
-import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import auth from '../firebase.init';
 const useFirebase = () => {
     const [user, setUser] = useState({});
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -25,12 +26,18 @@ const useFirebase = () => {
         }
         createUserWithEmailAndPassword(auth, email, password)
             .then(res => {
+                updateUserName();
                 setError('');
-                const user = res.user;
-                console.log(user);
+                navigate('/');
             })
             .catch(err => setError(err.message));
     };
+    // to get user name 
+    const updateUserName = () =>{
+        updateProfile(auth.currentUser, {
+            displayName: name
+        });
+    }
     // to sign in with email and password 
     const handleLogIn = e => {
         e.preventDefault();
@@ -61,6 +68,7 @@ const useFirebase = () => {
         })
     }, [])
     return {
+        setName,
         setEmail,
         setPassword,
         setConfirmPassword,
